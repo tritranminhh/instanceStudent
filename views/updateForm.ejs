@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update sinh viên</title>
+    <h1>Update sinh viên</h1>
+</head>
+    <form action="/updatestudents/<%=id%>/<%=ma_sinhvien%>/<%=ten%>" method="POST">
+    <label>ID:<input type="text" name="id" readonly="readonly" value="<%=id%>"></label>
+    <label>Mã SV:<input type="text" name="ma_sinhvien" value="<%=ma_sinhvien%>" readonly="readonly" ></label>
+    <label>Tên:<input type="text" name="ten" value="<%=ten%>"></label>
+    <input type="submit" name="submit" value="submit">
+    <input type="reset" name="reset" value="reset">
+    </form>
+    <input type="button" value="back" onclick="location.href='/students'">
+</html>

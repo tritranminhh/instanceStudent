@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thêm mới sinh viên</title>
+    <h1>Thêm mới sinh viên</h1>
+</head>
+    <form action="/students" method="POST">
+    <label>ID:<input type="text" name="id"></label>
+    <label>Mã SV:<input type="text" name="ma_sinhvien" ></label>
+    <label>Tên:<input type="text" name="ten"></label>
+    <input type="submit" name="submit" value="submit">
+    <input type="reset" name="reset" value="reset">
+    </form>
+    <input type="button" value="back" onclick="location.href='/students'">
+</html>

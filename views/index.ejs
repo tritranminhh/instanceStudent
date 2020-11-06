@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>      
+        <title>Danh sách sinh viên</title>
+        <h1>Danh sách sinh viên</h1>
+    </head>
+    <body>
+       
+        <table>
+            <tr>
+                <Th>id</Th>
+                <Th>mã sinh viên</Th>
+                <Th>tên</Th>
+            </tr>
+           
+            <tbody>
+                <% for(var i=0;i<datas.length;i++){%>
+                <tr>
+                    <Td><%=datas[i].id%></Td>
+                    <Td><%=datas[i].ma_sinhvien%></Td>
+                    <Td><%=datas[i].ten%></Td>
+                    <td>
+                        <form action="/students/<%=datas[i].id%>/<%=datas[i].ma_sinhvien%>" method="POST">
+                        <button type="submit">Delete</button>
+                        </form>
+                        <form action="/updateForm/<%=datas[i].id%>/<%=datas[i].ma_sinhvien%>/<%=datas[i].ten%>" method="POST">
+                            <button type="submit">Update</button>
+                        </form>
+                    </td>
+                </tr>
+                <%}%>
+            </tbody>
+          
+        </table>
+      
+        <a href="/createnew">Tạo mới sinh viên</a>
+    </body>
+
+</html>
